@@ -1,7 +1,5 @@
 #include <Servo.h>
-
-Servo horizServo;
-//Servo vertServo;
+#include <SoftwareSerial.h>
 
 const int HORIZ_SERVO_PIN = 5;
 ////const int VERT_SERVO_PIN = 6;

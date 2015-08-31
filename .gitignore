@@ -2,6 +2,15 @@
 ## CUSTOM IGNORES
 MyoArmVenv/
 myo-sdk-win-0.9.0/
+ServoWriter/.vs
+ServoWriter/Debug
+ServoWriter/Visual Micro
+*.sln
+*.opensdf
+*.sdf
+*.vcxproj
+*.vcxproj.filters
+
 
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
