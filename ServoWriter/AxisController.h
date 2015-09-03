@@ -11,7 +11,7 @@ class AxisController
 {
 public:
 	AxisController();
-	AxisController(Servo axisServo, int pinNum, int direction, SoftwareSerial output, int outMin = 0, int outMax = 179);
+	AxisController(Servo axisServo, int pinNum, SoftwareSerial output, int outMin = 0, int outMax = 179);
 	~AxisController();
 	int move_axis(int *myoDataArray);
 	void set_outMin(int newOutMin);
@@ -32,5 +32,8 @@ private:
 	int m_outMax;
 	int m_inMin;
 	int m_inMax;
-	void calibrate();
+	double servo_pos;
+	void calibrate(int maxSamples);
+	void get_calibration_reading(int maxSamples, double *data_avgs);
+	double get_average_double(double* data_list, int list_length);
 };

@@ -11,7 +11,7 @@ libmyo.init('C:\\Users\\James\\Documents\\Coding\\MyoArm\\myo-sdk-win-0.9.0\\bin
 from time import sleep
 
 HUB_INTERVAL_MS = 1000
-SERIAL_PORT = 2 #COM3
+SERIAL_OUT_PORT = 2 #COM3
 
 
 if __name__ == '__main__':
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     hub.run(HUB_INTERVAL_MS, feed)
 
     # set up serial communications
-    ser = serial.Serial(SERIAL_PORT)
+    ser = serial.Serial(SERIAL_OUT_PORT)
 
     # begin Myo loop
     try:
@@ -50,7 +50,6 @@ if __name__ == '__main__':
             ser.write([orient_x, orient_y, orient_z, orient_w,
                        accel_x, accel_y, accel_z,
                        gyro_x, gyro_y, gyro_z])
-            sleep(0.1)
         print("Goodbye, Myo!")
     finally:
         hub.shutdown()
